@@ -1,0 +1,7 @@
+﻿  main.cpp
+E:\Mi unidad\UPC Files\C_Plus_Plus\Projects\Project3\main.cpp(9,14): warning C4244: 'return': conversion from 'double' to 'int', possible loss of data
+E:\Mi unidad\UPC Files\C_Plus_Plus\Projects\Project3\main.cpp(15,16): error C2062: type 'int' unexpected
+E:\Mi unidad\UPC Files\C_Plus_Plus\Projects\Project3\main.cpp(21,9): error C2065: 'talla': undeclared identifier
+E:\Mi unidad\UPC Files\C_Plus_Plus\Projects\Project3\main.cpp(23,12): error C2065: 'talla': undeclared identifier
+E:\Mi unidad\UPC Files\C_Plus_Plus\Projects\Project3\main.cpp(23,19): error C2065: 'indice': undeclared identifier
+E:\Mi unidad\UPC Files\C_Plus_Plus\Projects\Project3\main.cpp(24,47): error C2065: 'indice': undeclared identifier

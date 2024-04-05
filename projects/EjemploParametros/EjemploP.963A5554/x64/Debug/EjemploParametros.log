@@ -1,0 +1,7 @@
+﻿  main.cpp
+E:\Mi unidad\UPC Files\C_Plus_Plus\Projects\EjemploParametros\main.cpp(32,2): error C2660: 'SumaNumeros': function does not take 3 arguments
+  E:\Mi unidad\UPC Files\C_Plus_Plus\Projects\EjemploParametros\main.cpp(15,5):
+  see declaration of 'SumaNumeros'
+  E:\Mi unidad\UPC Files\C_Plus_Plus\Projects\EjemploParametros\main.cpp(32,2):
+  while trying to match the argument list '(int, int, int)'
+  

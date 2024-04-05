@@ -1,0 +1,5 @@
+﻿  main.cpp
+E:\Mi unidad\UPC Files\C_Plus_Plus\Projects\Project2\main.cpp(17,16): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+E:\Mi unidad\UPC Files\C_Plus_Plus\Projects\Project2\main.cpp(18,25): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+  main.obj : MSIL module encountered; incremental linking is disabled for MSIL; performing full link
+  Project2.vcxproj -> E:\Mi unidad\UPC Files\C_Plus_Plus\Projects\Project2\x64\Debug\Project2.exe
