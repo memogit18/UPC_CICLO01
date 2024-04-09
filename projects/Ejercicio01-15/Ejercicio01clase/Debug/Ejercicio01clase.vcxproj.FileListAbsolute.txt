@@ -1,0 +1,2 @@
+D:\C_Plus_Plus\Projects\Ejercicio01-07clase\Ejercicio01clase\Debug\Ejercicio01clase.vcxproj.AssemblyReference.cache
+D:\C_Plus_Plus\Projects\Ejercicio01-15\Ejercicio01clase\Debug\Ejercicio01clase.vcxproj.AssemblyReference.cache
