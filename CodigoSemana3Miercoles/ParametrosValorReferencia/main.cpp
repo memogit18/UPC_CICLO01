@@ -7,7 +7,7 @@ void SumaNumeros(int a, int b, int& suma) {
     suma = a + b;
 }
 
-int SumaNumero(int a, int b, int& resta) {
+int RestaNumero(int a, int b, int& resta) {
     resta = a - b;
     return a + b;
 }

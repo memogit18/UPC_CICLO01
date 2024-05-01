@@ -20,7 +20,7 @@
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>
-    <ProjectGuid>{B54A45D6-426C-4B61-9BA7-44E3B37D305C}</ProjectGuid>
+    <ProjectGuid>{1FD78D62-7F5A-4BA2-8DE0-298F22769BBF}</ProjectGuid>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <Keyword>ManagedCProj</Keyword>
     <RootNamespace>Semana04EjerciciosCasa</RootNamespace>

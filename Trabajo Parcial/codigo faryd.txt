@@ -1,0 +1,107 @@
+#include <iostream>
+#include <conio.h>
+#include <math.h>
+
+using namespace std;
+
+string MostraHorario1()
+{
+	int opcion;
+	string horario;
+	cout << "Elige horario: \n";
+	cout << "1. 10:00, Dr. Juan Gabriel\n";
+	cout << "2. 12:00, Dra. Ana Lucia.\n";
+	cout << "3. 14:00, Dr. Juan Gabriel.\n";
+	cin >> opcion;
+
+	switch (opcion)
+	{
+	case 1: horario = "10:00, Dr. Juan Gabriel."; break;
+	case 2: horario = "12:00, Dra.Ana Lucia."; break;
+	case 3: horario = "14:00, Dr. Juan Gabriel."; break;
+	}
+	return horario;
+}
+string MostraHorario2()
+{
+	int opcion;
+	string horario;
+	cout << "Elige horario: \n";
+	cout << "1. 10:00, Dr. Abel Salazar\n";
+	cout << "2. 12:00, Dr. Joel Hernandez\n";
+	cout << "3. 14:00, Dra. Angelica Nuñez.\n";
+	cin >> opcion;
+
+	switch (opcion)
+	{
+	case 1: horario = "10:00, Dr. Abel Salazar."; break;
+	case 2: horario = "12:00, Dr. Joel Hernandez."; break;
+	case 3: horario = "14:00, Dra. Angelica Nuñez."; break;
+	}
+	return horario;
+}
+string MostraHorario3()
+{
+	int opcion;
+	string horario;
+	cout << "Elige horario: \n";
+	cout << "1. 10:00, Dra. Alessandra Paullo\n";
+	cout << "2. 12:00, Dra. Marta Perez.\n";
+	cout << "3. 14:00, Dr. Pablo Heredia.\n";
+	cin >> opcion;
+
+	switch (opcion)
+	{
+	case 1: horario = "10:00, Dra. Alessandra Paullo."; break;
+	case 2: horario = "12:00, Dra. Marta Perez."; break;
+	case 3: horario = "14:00, Dr. Pablo Heredia."; break;
+	}
+	return horario;
+}
+int MostrarEstablecimiento() {
+	int opcion;
+
+	cout << "Ingrese el establecimiento:\n";
+	cout << "1. Lima\n";
+	cout << "2. Trujillo\n";
+	cout << "3. Loreto\n";
+	cin >> opcion;
+	return opcion;
+}
+int main()
+{
+	int dni, opcion;
+	string nombre, horario, lugar;
+
+	cout << "Ingresa tu DNI: ";
+	cin >> dni;
+    cout << "Ingrese su nombre completo: ";
+    cin >> nombre;
+	
+	opcion = MostrarEstablecimiento();
+
+	switch (opcion)
+	{
+	case 1: 
+		
+		horario = MostraHorario1(); 
+		lugar = "Lima";
+		cout << lugar; break;
+	case 2: horario = MostraHorario2(); break;
+	case 3: horario = MostraHorario3();
+	}
+
+	cout << "RESERVA DE CITA:\n";
+	cout << "Paciente: " << nombre << endl;
+	cout << "DNI: " << dni << endl;
+	cout << "Lugar: " << lugar << endl;
+	cout << "Hora y lugar: " << horario;
+
+	getch();
+	return 0;
+}
+
+//ingrese dia, lugar, local , turno, dni
+//ingresar motivo.
+//pago por cita y revision
+//necesita lentes ? si o no

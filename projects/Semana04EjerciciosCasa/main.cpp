@@ -1,406 +1,222 @@
 #include<iostream>
 #include<conio.h>
 #include<math.h>
-#include<iomanip>
 
 using namespace std;
 
-void Ejemplo01() {
+void Ejercicio01() {
 
-	int edad = 0;
+	// ingreso de un número entero 
+	// si este es mayor o igual a 10 devuelva el triple de este 
+	// de lo contrario la cuarta parte de este.
 
-	cout << "Ingresa tu edad: ";
-	cin >> edad;
+	int number = 0;
 
-	if (edad >= 18) {
-		cout << "Eres mayor de edad.";
-	}
+	cout << "Ingresa un numero entero: ";
+	cin >> number;
 
-	else {
-		cout << "Eres menor de edad.";
-	}
-
-}
-
-void Ejemplo02() {
-
-	int numero = 0;
-	cout << "Ingresa un numero: ";
-	cin >> numero;
-
-	if (numero == 0) {
-		cout << "El numero es neutro.";
+	if (number <= 10) {
+		number *= 3;
+		cout << "El triple del numero es: " << number;
 	}
 	else {
-		if (numero < 0) {
-			cout << "El numero es negativo.";
-		}
-		else {
-			cout << "El numero es positivo.";
-		}
+		cout << "LA cuarta parte del numero es: " << (number/4.0);
 	}
+
 
 }
 
-void Ejemplo03() {
+void Ejercicio02() {
 
-	int edad = 0;
-	char sexo = ' ';  //se puede dejar sin iniciar tambien
+	//  Datos de entrada la distancia a recorrer y el número de días de estancia,
+	//  calcule el costo total de un Tour de Viaje.
+	//	El precio por cada 100 KM de recorrido es de S / .150 y
+	//  por cada día de estancia S / .520.
+	//	Por último, si el monto total a pagar sobrepasa los S / .2500, descuento del 35 % .
 
-	cout << "Ingrese tu edad: ";
-	cin >> edad;
+	int distance = 0, days = 0, total_cost = 0;
 
-	cout << "Ingresa tu sexo (H:hombre / M:mujer): ";
-	cin >> sexo;
+	cout << "Ingresa la distancia a recorrer en km: ";
+	cin >> distance;
 
+	cout << "Ingresa los dias de estancia: ";
+	cin >> days;
 
-	//if (edad >= 18 && (sexo == 'H' || sexo == 'h')) {  //c++ es case sensitive
-	//	cout << "Eres mayor de edad y eres hombre.";
-	//}
+	total_cost = (distance * 1.5) + (days * 520);
 
-	sexo = toupper(sexo);  //otra forma se arregar casesensitive
-	if (edad >= 18 && sexo == 'H') {  //c++ es case sensitive
-		cout << "Eres mayor de edad y eres hombre.";
-	}
-
-	else {
-
-		//15=> F => V
-		if (!(edad >= 18)) {
-			cout << "No es mayor de edad.";
-		}
-		else {
-			cout << "Eres nayor de edad.";
-		}
-
-	}
-}
-
-void Ejemplo04() {
-
-	double numero = 0;
-	cout << "Ingrese un numero: ";
-	cin >> numero;
-
-	numero = numero + 1;  //esta es un forma de incremento
-	numero++;  //agrega uno
-	++numero;  //es lo mismo, aunque no se usa muxo
-	numero += 10;  //asi se suma otra cantidad
-
-	cout << "Numero actualizado: " << numero;
-
-}
-
-void Ejemplo05() {
-
-	double precio = 0;
-	char gaseosa;
-
-	cout << "Ingresa gaseosa: ";
-	cin >> gaseosa;
-
-	//gaseosa = toupper(gaseosa);
-	switch (gaseosa)
-	{
-	case 'G': case 'g': precio = 2.2; break;
-	case 'K': precio = 3.5; break;
-	case 'C': precio = 2.8; break;
-
-	default:
-		precio = 4.2;
-		break;
-	}
-	cout << "El precio es:" << precio;
-
-}
-
-void EjercicioClase01() {
-
-	double nota = 0;
-
-	cout << "Ingresa nota: ";
-	cin >> nota;
-
-	if (nota < 0 || nota > 20) {
-		cout << "Nota ingresada fuera de rango.";
+	if (total_cost>2500) {
+		cout << "El costo total del tour es: " << total_cost<<endl;	
+		total_cost *= 0.65;
+		cout << "El costo total del tour con 30% dscto es: " << total_cost;
 	}
 	else {
-		if (nota < 12.5) {
-			cout << "Desaprobado.";
-		}
-		else {
-			cout << "Aprobado.";
-		}
+		cout << "El costo total sin descto es: " << total_cost;
 	}
 
 }
 
-void EjercicioClase02() {
+void Ejercicio03() {
 
-	int edad = 0;
+	// las coordenadas (x, y) e indique si se encuentra en el círculo x2 + y2 = 25.
 
-	cout << "Ingresa tu edad: ";
-	cin >> edad;
+	int coord_x = 0, coord_y = 0;
 
-	//validamos data
-	if (edad < 0) {
-		cout << "Edad fuera de rango.";
-	}
-	else {
-		if (edad < 18) {
-			cout << "Precio a pagar es 7 soles.";
-		}
-		else {
-			if (edad >= 18 && edad <= 50) {
-				cout << "Precio a pagar es 5 soles.";
-			}
-			else {
-				cout << "Precio a pagar es 15 soles.";
-			}
-		}
-	}
-
-}
-
-void EjercicioClase03() {
-
-	int lado1 = 0, lado2 = 0, lado3 = 0;
-
-	cout << "Ingresa los lados del triangulo(A B C): ";
-	cin >> lado1 >> lado2 >> lado3;
-
-	if (lado1 < lado2 + lado3 && lado2 < lado1 + lado3 && lado3 < lado1 + lado2) {
-		cout << "Es un Triangulo";
-	}
-
-	else {
-		cout << "No es un Triangulo";
-
-	}
-
-}
-
-void EjercicioClase04() {
-
-	//“EQUILATERO” o “ESCALENO” o “ISOSCELES
-
-	int lado1, lado2, lado3;
-
-	cout << "Ingresa los lados del Triangulo (A B C): ";
-	cin >> lado1 >> lado2 >> lado3;
-
-	if (lado1 == lado2 && lado2 == lado3) {
-		cout << "Es Equilatero.";
-	}
-	else {
-		if (lado1 != lado2 && lado2 != lado3 && lado1 != lado3) {
-			cout << "Es Escaleno";
-		}
-		else{
-			cout << "Es Isosceles.";
-		}
-		
-	}
-
-}
-
-void EjercicioClase05() {
-
-	// La ecuación cuadrática es: Ax2 + Bx + C
-
-	int elemA, elemB, elemC;
-	double discriminante = 0, raiz1 = 0, raiz2 = 0;
-
-	cout << "Ingresa los elementos de la ecuacion cuadratica (A B C): ";
-	cin >> elemA >> elemB >> elemC;
-
-	//Discriminate = B2 -4AC
-	discriminante = pow(elemB, 2) - (4 * elemA * elemC);
-	cout << sqrt(discriminante);
-
-	//Ecuacion Cuadratica
-	raiz1 = (-elemB + sqrt(discriminante)) / (2 * elemA);
-	raiz2 = (-elemB - sqrt(discriminante)) / (2 * elemA);
-
-	if (discriminante > 0) {
-
-		cout << "\nRaiz 1 es: "<<fixed<<setprecision(2)<<raiz1<<endl;
-		cout << "Raiz 2 es: "<<fixed<<setprecision(2)<<raiz2;	
-	}
-	else {
-		cout << "Son Raices Complejas."; 
-	}
-	
-}
-
-void EjercicioClase06() {
-
-	double edad = 0;
-	char sexo;
-
-	cout << "Ingresa tu Edad: ";
-	cin >> edad;
-
-	cout << "Ingresa tu Sexo(M / F): ";
-	cin >> sexo;
-
-	sexo = toupper(sexo);
-
-	if (sexo =='F') {
-		cout<<"Numero de Pulsaciones es: "<< (220 - edad) / 10;
-	}
-	else {
-		cout << "Numero de Pulsaciones es: "<< (210 - edad) / 10;
-	}
-
-}
-
-void EjercicioClase07() {
-
-	int gol_local = 0, gol_visita = 0;
-
-	cout << "Ingresa los goles del local y visitante: ";
-	cin >> gol_local >> gol_visita;
-
-	if (gol_local<0 || gol_visita < 0) {
-		cout << "El valor dece ser mayor que 0.";
-	} 
-	else {
-		if (gol_local>gol_visita) {
-			cout << "Gano el equipo local.";
-		}
-		else {
-			if (gol_visita>gol_local) {
-				cout << "Gano el visitante.";
-			}
-			else {
-				cout << "Empate.";
-			}
-		}
-	}
-
-}
-
-void EjercicioClase08() {
-
-	int tipo1 = 0, tipo2 = 0, tipo3 = 0;
-	double propina = 0,costo_total = 0;
-
-	cout << "Ingresa la cantidad de cada tipo(1 2 3) de caramelo: ";
-	cin >> tipo1>>tipo2>>tipo3;	
-
-	cout << "Ingresa la propina: ";
-	cin >> propina;
-
-	costo_total = tipo1 * 0.75 + tipo2 * 1.15 + tipo3 * 0.65;
-	
-	if (propina > costo_total) {
-		cout << "\nMonto total de la compra es: " << costo_total;
-	}
-	else {
-		cout << "\nMonto total de la compra es: " << costo_total<<endl;
-		cout << "La propina no fue suficiente." << endl;
-	}
-
-}
-
-void EjercicioClase10() {
-
-	char  a = 1;
-	
-	int codigo = 0; 
-	double nota1 = 0, nota2 = 0, nota3 = 0, promedio = 0;
-
-	cout << "Ingresa el Codigo del Alumno: ";
-	cin >> codigo;
-
-	cout << "Ingresa las 3 notas(A B C):";
-	cin >> nota1 >> nota2 >> nota3;
-
-	promedio = 0.3*nota1 + 0.3*nota2 + 0.4*nota3;
-
-	if (codigo < 0 || nota1<0 || nota2<0 || nota3<0 || nota1>20 || nota2>20 || nota3>20) {
-		
-		cout << "Ingresa un valor dentro del rango.";
-	}
-	else {
-		if (promedio < 13) {
-			
-			cout << "El promedio del alumno " << codigo << " es: " << promedio<<endl;
-			cout << "Estudie.";
-		}
-		else {
-			if (promedio >= 13 && promedio < 15) {
-				cout << "El promedio del alumno " << codigo << " es: " << promedio<<endl;
-				cout << "Felicitaciones " << a;
-			}
-			else {
-				if (promedio >= 15 && promedio < 20) {
-					cout << "El promedio del alumno " << codigo << " es: " << promedio<<endl;
-					cout << "Felicitaciones " << a<<a;		
-				}
-				else {
-					cout << "El promedio del alumno " << codigo << " es: " << promedio<<endl;
-					cout << "Felicitaciones " << a << a << a << a << a;
-				}
-			}
-		}
-	}
-
-}
-
-void EjercicioClase11() {
-
-	double coord_x = 0, coord_y = 0;
-
-	cout << "Ingresa las coordenas (x y): ";
+	cout << "Ingrese las coordenas (x y):";
 	cin >> coord_x >> coord_y;
 
-	if (coord_x == 0 || coord_y == 0) {
-		cout << "No se encuentra en ningun Cuadrante.";
-					
+	if (pow(coord_x,2) + pow(coord_y,2) == 25) {
+		cout<<"Las coordenas pertenen a la circunferencia.";
 	}
 	else {
-		if (coord_x > 0 && coord_y > 0) {
-			cout << "Se encuentra en el Primer Cuadrante.";
+		cout << "Las coordenas NO pertenen a la circunferencia.";
+	}
+
+
+}
+
+void Ejercicio04() {
+
+	// leer tres valores distintos, 
+	// cuál de los tres valores es el mayor y cuál es el menor.
+
+	int value1 = 0, value2 = 0, value3 = 0, max_value, min_value;
+
+	cout << "Ingresa 3 numeros (A B C):";
+	cin >> value1 >> value2 >> value3;
+
+	max_value = value1;
+
+	if (value2 > max_value) {	
+		max_value = value2;	
+	}
+
+	if (value3 > max_value) {
+		max_value = value3;	
+	}
+
+	min_value = value1;
+
+	if (value2 < min_value) {
+		min_value = value2;
+	}
+
+	if (value3 < min_value) {
+		min_value = value3;
+	}
+
+	cout << "El numero mas grande es: " << max_value<<" y el menor es: "<<min_value;	
+
+}
+
+void Ejercicio05() {
+
+	// leer tres valores distintos y los ordene de mayor a menor.
+
+	int value1 = 0, value2 = 0, value3 = 0, max_value, min_value, medio_value = 0;
+
+	cout << "Ingresa 3 numeros (A B C):";
+	cin >> value1 >> value2 >> value3;
+
+	max_value = value1;
+
+	if (value2 > max_value) {
+		max_value = value2;
+	}
+
+	if (value3 > max_value) {
+		max_value = value3;
+	}
+
+	min_value = value1;
+
+	if (value2 < min_value) {
+		min_value = value2;
+	}
+
+	if (value3 < min_value) {
+		min_value = value3;
+	}
+
+	medio_value = (value1 + value2 + value3) - (max_value + min_value);
+
+	cout << "De mayor a menor: " << max_value<<", " << medio_value<<", " << min_value;
+
+}
+
+void Ejercicio06_switch() {
+
+	// Convertir calificaciones numéricas, según la siguiente tabla :
+	// A = 19 o 20, B = 16, 17 o 18, C = 13, 14 o 15, D = 10, 11 o 12, E = 1 hasta el 9. 
+	// Se asume que la calificación está comprendida entre 1 y 20.
+
+	int calificacion;
+
+	cout << "Ingrese la calificacion (1-20): ";
+	cin >> calificacion;
+
+	if (calificacion < 0 || calificacion > 20) {
+		cout << "Ingresa un Calificacion entre el rango.";
+	}
+	else{
+		switch (calificacion) {
+		case 19: case 20: cout << "A";
+			break;
+		case 16: case 17: case 18: cout << "B";
+			break;
+		case 13: case 14: case 15: cout << "C";
+			break;
+		case 10: case 11: case 12: cout << "D";
+			break;
+		case 1: case 2: case 3: case 4: case 5: case 6: case 7: case 8: case 9: cout << "E";
+			break;
+
+		default:
+			cout << "Sacaste 0...(:";
+			break;
+		}
+	}
+}
+
+void Ejercicio07_ascii() {
+
+	// Leer un número entero e imprima si este es un:
+	// dígito o una letra mayúscula o letra minúscula u otro carácter.
+	// Dígitos = del 48 a 57
+	// Letras mayúsculas = del 65 a 90
+	// Letras minúsculas = del 97 a 122
+
+	int valor = char ('caracter');
+	
+	
+
+	cout << "Ingresa un numero entero (48-122): ";
+	cin >> caracter;
+
+	if (caracter >= 48 && caracter <= 57) {
+		cout << "Es un digito."<< caracter;	
+	}
+	else {
+		if (caracter >= 65 && caracter <= 90) {
+			cout << "Es una letra mayuscula."<< caracter;	
 		}
 		else {
-			if (coord_x < 0 && coord_y > 0) {
-				cout << "Se encuentra en el Segundo Cuadrante.";
-			}
-			else {
-				if (coord_x < 0 && coord_y < 0) {
-					cout << "Se encuentra en el Tercer Cuadrante.";
-				}
-				else {
-					cout << "Se encuentra en el Cuarto Cuadrante.";
-				}
-			}
+			cout << "Es una letra minuscula."<< caracter;	
 		}
-
 	}
+
 }
 
 
 void main() {
 
-	//Ejemplo01();
-	//Ejemplo02();
-	//Ejemplo03();
-	//Ejemplo04();
-	//Ejemplo05();
-	//EjercicioClase01();	
-	//EjercicioClase02();
-	//EjercicioClase03();
-	//EjercicioClase04();
-	//EjercicioClase05();
-	//EjercicioClase06();
-	//EjercicioClase07();
-	//EjercicioClase08();
-	//EjercicioClase10();
-	EjercicioClase11();
+	//Ejercicio01();
+	//Ejercicio02();	
+	//Ejercicio03();
+	//Ejercicio04();
+	//Ejercicio05();
+	//Ejercicio06_switch();	
+	Ejercicio07_ascii();
 
 
 	_getch();
-
 }

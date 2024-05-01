@@ -1,0 +1,8 @@
+﻿  main.cpp
+D:\C_Plus_Plus\Projects\TallerSemana04\Ejercicio01\main.cpp(11,23): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+D:\C_Plus_Plus\Projects\TallerSemana04\Ejercicio01\main.cpp(30,32): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+D:\C_Plus_Plus\Projects\TallerSemana04\Ejercicio01\main.cpp(102,2): error C2181: illegal else without matching if
+D:\C_Plus_Plus\Projects\TallerSemana04\Ejercicio01\main.cpp(97,24): warning C4390: ';': empty controlled statement found; is this the intent?
+D:\C_Plus_Plus\Projects\TallerSemana04\Ejercicio01\main.cpp(144,21): warning C4305: '=': truncation from 'double' to 'float'
+D:\C_Plus_Plus\Projects\TallerSemana04\Ejercicio01\main.cpp(145,21): warning C4305: '=': truncation from 'double' to 'float'
+D:\C_Plus_Plus\Projects\TallerSemana04\Ejercicio01\main.cpp(156,19): warning C4244: '=': conversion from 'double' to 'float', possible loss of data

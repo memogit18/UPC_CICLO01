@@ -1,0 +1,2 @@
+D:\C_Plus_Plus\Projects\Semana04EjerciciosCasa\Semana04.B54A45D6\Debug\Semana04EjerciciosCasa.vcxproj.AssemblyReference.cache
+D:\C_Plus_Plus\Projects\Semana04EjerciciosClase\Semana04.B54A45D6\Debug\Semana04EjerciciosCasa.vcxproj.AssemblyReference.cache
